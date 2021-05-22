@@ -66,6 +66,7 @@ function Navbar() {
           </div>
         ) : (
           <Button
+            className={classes.responsiveButton}
             component={Link}
             to="/auth"
             variant="contained"

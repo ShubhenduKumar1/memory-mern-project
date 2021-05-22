@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { GoogleLogin } from "react-google-login";
+import bcrypt from "bcryptjs";
 
 import {
   Avatar,
@@ -17,6 +18,7 @@ import Icon from "./icon";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router";
 import { signin, signup } from "../../action/auth";
+
 const initialState = {
   firstname: "",
   lastname: "",
@@ -27,6 +29,7 @@ const initialState = {
 function Auth() {
   const [formData, setFormData] = useState(initialState);
   const classes = useStyles();
+
   const [showPassword, setShowPassword] = useState(false);
   const state = null;
   const dispatch = useDispatch();
@@ -41,6 +44,7 @@ function Auth() {
       dispatch(signin(formData, history));
     }
   };
+
   const handleChange = (e) => {
     setFormData({
       ...formData,

@@ -40,4 +40,17 @@ export default makeStyles((theme) => ({
     color: theme.palette.getContrastText(deepPurple[500]),
     backgroundColor: deepPurple[500],
   },
+  [theme.breakpoints.down("sm")]: {
+    resposniveHeading: {
+      fontSize: "2rem",
+      padding: "0px 10px",
+    },
+    resposniveImage: {
+      height: "30px",
+    },
+    resposniveButton: {
+      padding: "3px 5px",
+      fontSize: "0.87rem",
+    },
+  },
 }));
